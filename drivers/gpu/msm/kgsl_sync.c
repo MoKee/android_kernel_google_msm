@@ -261,7 +261,7 @@ int kgsl_sync_timeline_create(struct kgsl_context *context)
 
 	ktimeline = (struct kgsl_sync_timeline *) context->timeline;
 	ktimeline->last_timestamp = 0;
-	ktimeline->device = context->device;
+	ktimeline->device = context->dev_priv->device;
 	ktimeline->context_id = context->id;
 
 	return 0;
